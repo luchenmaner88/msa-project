@@ -13,7 +13,10 @@
 		$dbname = "employeedatabase";
 
 		// Create database connection
-		$conn = new mysqli($servername, $username, $password, $dbname);
+		//$conn = new mysqli($servername, $username, $password, $dbname);
+                $conn = mysqli_init();
+                mysqli_ssl_set($con,NULL,NULL, "{path to CA cert}", NULL, NULL);
+                mysqli_real_connect($conn, $servername, $username, $password, $dbname, 3306, MYSQLI_CLIENT_SSL);
 
 		// Check connection
 		if ($conn->connect_error) {
