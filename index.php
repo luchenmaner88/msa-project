@@ -5,6 +5,7 @@
 </head>
 <body>
 	<h1>MySQL Table Viewer</h1>
+	<h3>This is from the web app service</h3>
 	<?php
 		// Define database connection variables
 		$servername = "db-employee-mysql.mysql.database.azure.com";
