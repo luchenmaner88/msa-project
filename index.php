@@ -26,7 +26,7 @@
 		}
 
 		// Query database for all rows in the table
-		$sql = "SELECT TOP 100 * FROM employees";
+		$sql = "SELECT * FROM employees LIMIT 10";
 		$result = $conn->query($sql);
 
 		if ($result->num_rows > 0) {
